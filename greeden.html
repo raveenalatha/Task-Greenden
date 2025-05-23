@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenden - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-green-700 text-white p-4 flex justify-between items-center shadow">
+    <div class="text-xl font-bold">Greenden</div>
+    <ul class="flex space-x-6">
+      <li><a href="index.html" class="underline font-semibold">Home</a></li>
+      <li><a href="product.html" class="hover:underline">Products</a></li>
+      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Hero Section -->
+  <section
+  id="home"
+  class="h-screen bg-cover bg-center flex items-start justify-center px-6 pt-20"
+  style="background-image: url('https://a.storyblok.com/f/102007/768x432/94c9316db2/sustainable-packaging-paper-eco-friendly-disposable-tableware-plates-cups-bowls-recycling-signs.jpg');"
+  
+>
+  <div class="text-top rounded-lg max-w-4xl mx-auto">
+    <h1 class="text-5xl font-extrabold text-black mb-6">Welcome to Greenden 🌿</h1>
+    <p class="text-lg text-white leading-relaxed mb-8">
+      Greenden is your go-to destination for sustainable, green, and eco-friendly lifestyle products. Built with HTML and Tailwind CSS, this site introduces you to clean, responsive web design — just like the real world.
+    </p>
+    <a 
+      href="product.html"
+      class=" text-center inline-block bg-white text-green-800 px-6 py-3 rounded-full font-medium hover:bg-green-200 transition"
+    >
+      Explore Products
+    </a>
+ </div>
+</section>
+
+
+
+  
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center p-4 mt-12">
+    &copy; 2025 Greenden. Built with HTML & Tailwind CSS.
+  </footer>
+
+
+  <script>
+    const section = document.getElementById("home");
+  
+    const images = [
+      "https://a.storyblok.com/f/102007/768x432/94c9316db2/sustainable-packaging-paper-eco-friendly-disposable-tableware-plates-cups-bowls-recycling-signs.jpg",
+      "https://cdn.shopify.com/s/files/1/0030/3271/1241/files/PAFF_042417_motivatingecobehavior-609x419_large.jpg?v=1561051784",
+      "https://www.meteoweb.eu/wp-content/uploads/2017/11/INQUINAMENTO-DOMESTICO-COP.jpg"
+    ];
+  
+    let current = 0;
+  
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      section.style.backgroundImage = `url('${images[current]}')`;
+    }, 5000); // Change every 5 seconds
+  </script>
+
+</body>
+</html>
